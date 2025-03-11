@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #e5ddd5;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.sidebar, .chat-area {
+    display: inline-block;
+    vertical-align: top;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #fff;
+    overflow-y: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30vw;
+}
+
+.chat {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+
+.chat:hover{
+    background-color: #f6f9ff;
+}
+
+.chat.active {
+    background-color: lightgray;
+}
+
+.chat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2C439C;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.chat-name {
+    font-size: 16px;
+    margin-left: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.chat-area {
+    position: absolute;
+    left: 30vw;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: #ece5dd;
+    display: none;
+}
+
+.chat-header {
+    height: 50px;
+    background-color: #2C439C;
+    color: white;
+    padding: 10px;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.chat-box {
+    height: calc(100vh - 110px);
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+    max-width: 70%;
+    display: block;
+    position: relative;
+}
+
+.message.received {
+    background-color: #fff;
+    float: left;
+    clear: both;
+}
+
+.message.sent {
+    background-color: #2C439C;
+    color: white;
+    float: right;
+    text-align: right;
+    clear: both;
+}
+
+.message-input {
+    height: 60px;
+    background-color: #fff;
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+input[type="text"] {
+    width: calc(100% - 7vw);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px;
+    outline: none;
+    display: inline-block;
+}
+
+.send-btn {
+    background-color: #2C439C;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 6vw;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}

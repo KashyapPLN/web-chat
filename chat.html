@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="chat.css">
+    <script src="chat.js">
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h3 style="padding: 10px;">Chats</h3>
+            <div class="chat" onclick="openChat('Group1', this)">
+                <div class="chat-icon">G</div> 
+                <span class="chat-name">Group1</span>
+            </div>
+            <div class="chat" onclick="openChat('Group2', this)">
+                <div class="chat-icon">G</div>
+                <span class="chat-name">Group2</span>
+            </div>
+            <div class="chat" onclick="openChat('Group3', this)">
+                <div class="chat-icon">G</div>
+                <span class="chat-name">Group3</span>
+            </div>
+        </div>
+        
+        <div class="chat-area" id="chat-area" style="display: none;">
+            <div class="chat-header" id="chat-header"></div>
+            <div class="chat-box" id="chat-box"></div>
+            <div class="message-input">
+                <input type="text" id="message-input" placeholder="Type a message..." onkeypress="if(event.key === 'Enter') sendMessage()">
+                <button class="send-btn" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
