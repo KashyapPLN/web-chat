@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
     <link rel="stylesheet" href="chat.css">
-    <script src="chat.js">
-    </script>
+    <script src="chat.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <div class="container">
+        <div class="left-nav">
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-comment-dots"></i>
+            <i class="fa-solid fa-users"></i>
+            <i class="fa-solid fa-gear settings-icon"></i>
+        </div>
+        
         <div class="sidebar">
             <h3 style="padding: 10px;">Chats</h3>
+            <div class="search-div">
+                <input type="seach" class="search-input" placeholder="Search" />
+            </div>
             <div class="chat" onclick="openChat('Group1', this)">
                 <div class="chat-icon">G</div> 
                 <span class="chat-name">Group1</span>
